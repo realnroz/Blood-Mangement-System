@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">Are you sure, you want to delete this account?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="{% url 'delete_account' %}"><button type="button" class="btn btn-primary">Yes</button></a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card bg-light mb-3">
+      <div class="card-header">
+        <h1 class="display-4 mt-4">Welcome to your dashboard</h1>
+        <p class="lead">Manage your profile here.</p>
+      </div>
+      <article class="card-body">
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="{% url 'edit-profile' %}">
+                <button type="button" id='pb1' class="btn btn-primary btn-lg">Update Profile&nbsp</button>
+              </a>
+            </div>
+            <div class="col">
+              <a>
+                <button type="button" id='pb2' class="btn btn-danger btn-lg" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop">Delete Account</button>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="{% url 'password_change' %}">
+                <button type="button" id='pb3' class="btn btn-warning btn-lg">Change Password</button>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    </article>
+  </div>
+</div>
+</div>
+
+{% endblock content%}

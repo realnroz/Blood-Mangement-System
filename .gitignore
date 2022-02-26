@@ -1,0 +1,7 @@
+__pycache__/
+
+static/images/profiles/*
+
+!static/images/profiles/.gitkeep
+
+db.sqlite3
