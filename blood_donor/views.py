@@ -45,13 +45,13 @@ def registration(request):
                 '''
             
 
-                # send_mail(
-                #     subject,
-                #     message,
-                #     settings.EMAIL_HOST_USER,
-                #     [user.email],
-                #     fail_silently = False, 
-                # )
+                send_mail(
+                    subject,
+                    message,
+                    settings.EMAIL_HOST_USER,
+                    [user.email],
+                    fail_silently = False, 
+                )
 
                 
                 messages.success(request,f'Account successfully created for {user_name.title()}')
