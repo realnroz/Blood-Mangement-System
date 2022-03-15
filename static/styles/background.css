@@ -192,7 +192,6 @@
 
 /* User Profile */
 #pb1{
-    margin-left: 90px;
     height: 100px;
     width: 100 px;
 }
@@ -203,7 +202,6 @@
 }
 
 #pb3{
-    margin-left: -90px;
     height: 100px;
     width: 100 px;
 }

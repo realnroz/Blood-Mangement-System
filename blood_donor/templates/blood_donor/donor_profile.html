@@ -33,26 +33,17 @@
       </div>
       <article class="card-body">
 
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <a href="{% url 'edit-profile' %}">
-                <button type="button" id='pb1' class="btn btn-primary btn-lg">Update Profile&nbsp</button>
-              </a>
-            </div>
-            <div class="col">
-              <a>
-                <button type="button" id='pb2' class="btn btn-danger btn-lg" data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop">Delete Account</button>
-              </a>
-            </div>
-
-            <div class="col">
-              <a href="{% url 'password_change' %}">
-                <button type="button" id='pb3' class="btn btn-warning btn-lg">Change Password</button>
-              </a>
-            </div>
-          </div>
+        <div class="container d-flex justify-content-around">
+          <a href="{% url 'edit-profile' %}" class="mr-5">
+            <button type="button" id='pb1' class="btn btn-primary btn-lg">Update Profile</button>
+          </a>
+          <a class="mr-5">
+            <button type="button" id='pb2' class="btn btn-danger btn-lg" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">Delete Account</button>
+          </a>
+          <a href="{% url 'password_change' %}" class="mr-5">
+            <button type="button" id='pb3' class="btn btn-warning btn-lg">Change Password</button>
+          </a>
         </div>
     </div>
     </article>
